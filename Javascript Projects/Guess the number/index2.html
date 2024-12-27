@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        h1{
+            font-size: 5em;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <h1>GUESS THE NUMBER</h1>
+
+    <script>
+        
+        let random = 1 + Math.floor(Math.random()*99)
+        let input = Number(prompt("Enter a number : "))
+        
+        while (input !== random) {
+            if (input > random) {
+                alert("Too High")
+            } else if(input < random){
+                alert("Too low")
+            }
+            else if(typeof(input) == "string"){
+                alert("Please enter a number !!")
+            }
+            input = Number(prompt("Enter a number : "))
+        }
+        alert("You won")
+    </script>
+</body>
+</html>

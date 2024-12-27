@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            flex-direction: column;
+        }
+
+        input {
+            max-width: 700px;
+            font-size: 5rem;
+            border: 2px solid black;
+            box-shadow: 2px 2px rgb(121, 121, 121);
+            text-align: center;
+        }
+
+        input:focus {
+            border: 2px solid black;
+            box-shadow: 2px 2px rgb(121, 121, 121);
+            outline: none;
+        }
+
+        input::placeholder {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        button {
+            font-size: 2rem;
+            padding: 10px;
+            border-radius: 20px;
+            margin: 20px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            input {
+                width: 300px;
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            button {
+                font-size: 1.2rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guess The number <br> Number will be between 1 - 100</h1><br>
+    <input type="number" id="input" placeholder="Enter the number" max="100">
+    <button>Enter</button>
+    <div id="display"></div>
+
+    <script>
+        let random = 1 + Math.floor(Math.random() * 99)
+        console.log(random);
+        
+        let display = document.getElementById("display")
+        
+        let btn = document.getElementsByTagName("button")[0]
+        
+        btn.addEventListener("click", () => {
+            
+            let prom = new Promise((resolve, reject) => {
+                display.innerHTML="You won"
+                resolve();
+            })
+            prom.then(()=>{
+                inputValue == null;
+            })
+            let inputValue = document.getElementById("input").value
+            
+                    let x = parseFloat(inputValue)
+            
+            if (isNaN(x)) {
+                    display.innerHTML = "Please type a number"
+                alert("Please type a number")
+            }
+             else if (x > random) {
+                display.innerHTML = "Too high"
+                alert("Too high")
+            }
+            else if (x < random) {
+                display.innerHTML = "Too low"
+                alert("Too low")
+            }
+            else if (x == random) {
+                display.innerHTML = "You won"
+                alert("You won")
+                return
+            }
+            else {
+                display.innerHTML = "Invalid Number"
+            }
+            
+        })
+
+    </script>
+</body>
+
+</html>

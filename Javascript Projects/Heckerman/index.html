@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heckerman</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+         body{
+            background-color: black;
+
+         }
+         h1{
+            font-size: 6rem;
+            text-align: center;
+            color: rgb(1, 38, 1);
+            background-color: rgb(42, 84, 44);
+            font-family: Haettenschweiler;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+         }
+         div{
+            color: green;
+            font-size: 2rem;
+            font-family: Lucida Sans Typewriter;
+         }
+    </style>
+</head>
+<body>
+<h1>Hecker Terminal</h1>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+    <script>
+        let randomTime = 1 + Math.floor(Math.random()*5)
+        console.log(randomTime)
+
+        let display = document.getElementsByTagName("div")
+
+        let disArray = ["Initializing Hack Program",
+            "Hacking XYZ's username",
+            "Username found XYZ_123",
+            "Connecting to facebook"
+        ]
+        let prom = async () => {
+         return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve()
+                }, randomTime*1000);
+            })
+        }
+        async function main() {
+           for (let i = 0; i < disArray.length; i++) {
+            const element = disArray[i];
+            await prom()
+            display[i].innerHTML += element 
+            let dots = setInterval(() => {
+                if (display[i].innerHTML.endsWith("...")) {
+                    display[i].innerHTML = display[i].innerHTML.length.slice(0, -3)
+                } else {
+                    display[i].innerHTML += "."
+                }
+             }, 1000);
+           }
+           
+        }
+        main()
+    </script>
+</body>
+</html>

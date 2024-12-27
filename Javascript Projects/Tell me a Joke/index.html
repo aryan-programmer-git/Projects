@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tell me a Joke</title>
+  <style>
+    *{
+      margin: 0px;
+      padding:0px;
+      font-size: 16px;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50vh;
+      background-color: burlywood;
+      flex-direction: column;
+      gap:10px ;
+    }
+    h1{
+      font-size: 4rem;
+      font-family: cursive;
+    }
+    button{
+      padding: 10px;
+      font-size: 2.5rem;
+      border-radius: 7px;
+      border: none;
+      background-color: rgb(193, 145, 82);
+      color: white;
+    }
+    button:hover{
+      cursor: pointer;
+      background-color: rgb(218, 169, 106);
+    }
+    button:active{
+      box-shadow: 2px 2px 2px inset rgb(46, 45, 45);
+      background-color: rgb(231, 155, 56);
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Press the button to generate JOKES</h1>
+<button onclick="generate()">Generate !</button>
+<div id="main"></div>
+    <script>
+      let random = 1+ Math.floor(Math.random()*10)
+      console.log(random);
+      const jokeArray = ["I'm sceptical of anyone who tells me they do yoga every day, that's a bit of a stretch.",
+        "I have a few jokes about unemployed people, but none of them work.",
+        "I failed math so many times at school, I can’t even count.",
+        "Blunt pencils are really pointless.",
+        "6:30 is the best time on a clock, hands down.",
+        "Two wifi engineers got married, the reception was fantastic.",
+        "The man who invented Velcro has died. RIP.",
+        "The rotation of Earth really makes my day.",
+        "I can tell when people are being judgmental just by looking at them.",
+        "It takes a lot of balls to golf the way I do."
+      ]
+      let display = document.getElementById("main")
+
+      function generate() {
+        let prom =  new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve()
+          }, 5000);
+        })
+        display.innerHTML = jokeArray[random.valueOf()]
+        prom.then(()=>{
+          window.location.reload()
+        })
+        
+        
+        
+      }
+      
+      
+    </script>
+</body>
+</html>
