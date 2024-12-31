@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body {
+    background: rgb(17, 76, 145);
+    background: linear-gradient(229deg, rgba(17, 76, 145, 1) 42%, rgba(200, 60, 124, 1) 84%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container {
+    margin: 100px auto;
+    display: flex;
+    background-color: white;
+    max-width: 550px;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+button {
+    padding: 10px 7px;
+    margin: 0;
+    background-color: #03C03C;
+    color: #fff;
+    border: none;
+    border-radius: 15px 0px 0px 15px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+button:active {
+
+    box-shadow: 0px 2px 4px 1px rgba(55, 55, 55, 0.856);
+    background-color: #03af36;
+}
+
+#input-task {
+    margin: 0;
+    font-size: 1.4rem;
+    padding: 9px 7px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid black;
+    width: 70%;
+    border-left: none;
+}
+
+#input-task:focus {
+    outline: none;
+}
+
+.input {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tasks {
+    display: flex;
+    flex-direction: column;
+}
+
+.tasks ul {
+    list-style-type: none;
+    line-height: 1.5;
+    font-family: MS Reference Sans Serif;
+}
+
+
+#display ul li {
+    font-size: 1.4rem;
+    position: relative;
+    padding-left: 30px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+#display ul li::before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+    top: 7px;
+    left: 0px;
+    border-radius: 60px;
+    padding: 4px;
+}
+
+.checked {
+    text-decoration: line-through;
+}
+
+.checked::before {
+    background-color: orangered;
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0px 8px;
+    border-radius: 60px;
+    font-size: 1.6rem;
+}
+li span:hover{
+    background-color: rgb(207, 207, 207);
+}
