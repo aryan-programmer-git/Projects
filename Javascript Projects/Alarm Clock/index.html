@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Alarm Clock <img src="clock.png" alt="Error 404" height="60" width="60"></h1>
+
+        <div id="time-display"></div>
+
+        <div class="input-container">
+<div class="set-time">
+    <select  id="hours">
+        <option value=""hidden>Hour</option>
+
+    </select>
+    <select  id="min">
+        <option value="" hidden>Min</option>
+    </select>
+    <select  id="sec" hidden></select>
+    <select  id="ampm">
+        <option value="" hidden>AM/PM</option>
+    </select>
+</div>
+            <button>Set Time</button>
+            <audio id="audio" src="ringtone.mp3"></audio>
+        </div>
+        <div id="display"></div>
+    </div>
+
+    <script src="scirpt.js"></script>
+</body>
+</html>

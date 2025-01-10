@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Calibri;
+}
+
+body {
+    background: rgb(40, 17, 145);
+    background: linear-gradient(133deg, rgba(40, 17, 145, 0.9864320728291317) 8%, rgba(60, 173, 200, 1) 84%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgb(54, 53, 53);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.container h1 {
+    font-size: 3rem;
+    display: flex;
+    gap: 10px;
+
+}
+
+#time-display {
+    font-size: 5rem;
+    font-weight: 600;
+    align-self: center;
+}
+
+.input-container {
+    width: 500px
+}
+
+.set-time {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.set-time select {
+    padding: 10px 15px;
+    font-size: 1.7rem;
+    border-radius: 10px;
+    background: none;
+    background-color: rgb(2, 127, 217);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+}
+
+.set-time select option{
+    background-color: white;
+    border-radius: 10px;
+    color: #111;
+    font-weight: bold;
+    padding: 0px;
+    text-align: center;
+}
+
+.input-container button {
+    width: 100%;
+    margin: 30px 0px;
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding: 1px 20px;
+    background-color: rgb(2, 127, 217);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-container button:hover{
+    background-color: rgb(6, 107, 179);
+}
+.input-container button:active{
+    animation: 1s ease-in-out btn ;
+}
+
+/* @keyframes duration | easing-function | delay |
+iteration-count | direction | fill-mode | play-state | name */
+@keyframes btn {
+    0%{
+        transform: scale(1,1);
+    }
+    100%{
+        transform: scale(0.7,0.7);
+    }
+
+}
